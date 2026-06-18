@@ -23,7 +23,7 @@ AntiMotion is a lightweight research codebase for generating protected videos be
 
 The current release includes:
 
-- `AntiMotion/anti_motion.py`: two-stage PGD protection for single videos or folders of `.mp4` files.
+- `AntiMotion/anti_motion.py`: two-stage PGD protection for a single `.mp4` video.
 - `AntiMotion/model_loader.py`: Diffusers/Transformers model loading helpers.
 - `AntiMotion/third_party/motiondirector/`: the minimal MotionDirector-compatible UNet and LoRA components required by the protection script.
 - `AntiMotion/assets/results/`: reserved space for README demos, qualitative comparisons, and generated previews.
@@ -199,24 +199,14 @@ CUDA_VISIBLE_DEVICES=0,1 python anti_motion.py \
   --global_weight 0.5
 ```
 
-### Folder of Videos
-
-```bash
-CUDA_VISIBLE_DEVICES=0,1 python anti_motion.py \
-  --video_path /path/to/video_folder \
-  --output_path outputs/protected_videos \
-  --model_path ./zeroscope_v2_576w \
-  --prompt "a person is moving"
-```
-
-When `--video_path` is a single file, `--output_path` is treated as an output file. When `--video_path` is a folder, `--output_path` is treated as an output folder and each result is saved as `protected_<input_name>.mp4`.
+The output path should be a single `.mp4` file.
 
 ## Main Arguments
 
 | Argument | Default | Description |
 | --- | --- | --- |
-| `--video_path` | required | Input `.mp4` file or folder containing `.mp4` files. |
-| `--output_path` | `protected.mp4` | Output file for a single input or output folder for batch mode. |
+| `--video_path` | required | Input `.mp4` file. |
+| `--output_path` | `protected.mp4` | Output `.mp4` file. |
 | `--model_path` | required | Local path to the base text-to-video model. |
 | `--prompt` | `a person is moving` | Text prompt used by the protection objective. |
 | `--width` | `576` | Width used when loading and resizing frames. |
