@@ -44,38 +44,13 @@ The objective combines a temporal denoising loss, an adversarial temporal differ
 
 ## Results and Video Demo
 
-<table>
-  <tr>
-    <td align="center"><b>Case</b></td>
-    <td align="center"><b>Original video</b></td>
-    <td align="center"><b>Trained on clean video (ori)</b></td>
-    <td align="center"><b>Trained on protected video (pro 1)</b></td>
-    <td align="center"><b>Trained on protected video (pro 2)</b></td>
-  </tr>
-  <tr>
-    <td align="center"><code>ikun</code></td>
-    <td><video src="AntiMotion/assets/results/ikun/original.mp4" width="180" controls muted loop playsinline></video></td>
-    <td><video src="AntiMotion/assets/results/ikun/trained_on_clean.mp4" width="180" controls muted loop playsinline></video></td>
-    <td><video src="AntiMotion/assets/results/ikun/trained_on_protected_1.mp4" width="180" controls muted loop playsinline></video></td>
-    <td><video src="AntiMotion/assets/results/ikun/trained_on_protected_2.mp4" width="180" controls muted loop playsinline></video></td>
-  </tr>
-  <tr>
-    <td align="center"><code>project_12</code></td>
-    <td><video src="AntiMotion/assets/results/project_12/original.mp4" width="180" controls muted loop playsinline></video></td>
-    <td><video src="AntiMotion/assets/results/project_12/trained_on_clean.mp4" width="180" controls muted loop playsinline></video></td>
-    <td><video src="AntiMotion/assets/results/project_12/trained_on_protected_1.mp4" width="180" controls muted loop playsinline></video></td>
-    <td><video src="AntiMotion/assets/results/project_12/trained_on_protected_2.mp4" width="180" controls muted loop playsinline></video></td>
-  </tr>
-  <tr>
-    <td align="center"><code>project_13</code></td>
-    <td><video src="AntiMotion/assets/results/project_13/original.mp4" width="180" controls muted loop playsinline></video></td>
-    <td><video src="AntiMotion/assets/results/project_13/trained_on_clean.mp4" width="180" controls muted loop playsinline></video></td>
-    <td><video src="AntiMotion/assets/results/project_13/trained_on_protected_1.mp4" width="180" controls muted loop playsinline></video></td>
-    <td><video src="AntiMotion/assets/results/project_13/trained_on_protected_2.mp4" width="180" controls muted loop playsinline></video></td>
-  </tr>
-</table>
+| Case | Original video | Clean-training result | Protected-training result A | Protected-training result B |
+| --- | --- | --- | --- | --- |
+| `ikun` | [<img src="AntiMotion/assets/results/ikun/preview_original.gif" width="180" alt="ikun original video preview">](AntiMotion/assets/results/ikun/original.mp4) | [<img src="AntiMotion/assets/results/ikun/preview_clean_result.gif" width="180" alt="ikun clean-training result preview">](AntiMotion/assets/results/ikun/trained_on_clean.mp4) | [<img src="AntiMotion/assets/results/ikun/preview_protected_result_a.gif" width="180" alt="ikun protected-training result A preview">](AntiMotion/assets/results/ikun/trained_on_protected_1.mp4) | [<img src="AntiMotion/assets/results/ikun/preview_protected_result_b.gif" width="180" alt="ikun protected-training result B preview">](AntiMotion/assets/results/ikun/trained_on_protected_2.mp4) |
+| `project_12` | [<img src="AntiMotion/assets/results/project_12/preview_original.gif" width="180" alt="project 12 original video preview">](AntiMotion/assets/results/project_12/original.mp4) | [<img src="AntiMotion/assets/results/project_12/preview_clean_result.gif" width="180" alt="project 12 clean-training result preview">](AntiMotion/assets/results/project_12/trained_on_clean.mp4) | [<img src="AntiMotion/assets/results/project_12/preview_protected_result_a.gif" width="180" alt="project 12 protected-training result A preview">](AntiMotion/assets/results/project_12/trained_on_protected_1.mp4) | [<img src="AntiMotion/assets/results/project_12/preview_protected_result_b.gif" width="180" alt="project 12 protected-training result B preview">](AntiMotion/assets/results/project_12/trained_on_protected_2.mp4) |
+| `project_13` | [<img src="AntiMotion/assets/results/project_13/preview_original.gif" width="180" alt="project 13 original video preview">](AntiMotion/assets/results/project_13/original.mp4) | [<img src="AntiMotion/assets/results/project_13/preview_clean_result.gif" width="180" alt="project 13 clean-training result preview">](AntiMotion/assets/results/project_13/trained_on_clean.mp4) | [<img src="AntiMotion/assets/results/project_13/preview_protected_result_a.gif" width="180" alt="project 13 protected-training result A preview">](AntiMotion/assets/results/project_13/trained_on_protected_1.mp4) | [<img src="AntiMotion/assets/results/project_13/preview_protected_result_b.gif" width="180" alt="project 13 protected-training result B preview">](AntiMotion/assets/results/project_13/trained_on_protected_2.mp4) |
 
-`trained_on_clean` denotes MotionDirector output trained on clean videos, while `trained_on_protected` denotes output trained on protected videos.
+Clean-training results are generated by MotionDirector models trained on clean videos. Protected-training results are generated by MotionDirector models trained on AntiMotion-protected videos.
 
 ## Project Structure
 
