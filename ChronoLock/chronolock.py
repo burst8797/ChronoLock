@@ -588,7 +588,7 @@ def protect_video(
 
     F_total = frames.shape[0]
     if F_total < 2:
-        raise ValueError("Anti-Motion temporal protection requires at least 2 frames.")
+        raise ValueError("chronolock temporal protection requires at least 2 frames.")
 
     chunks = [
         (s, min(s + chunk_size, F_total), frames[s:min(s + chunk_size, F_total)])
@@ -761,7 +761,7 @@ def main():
     epsilon_scaled = args.epsilon * 2
 
     print(f"\n{'='*60}")
-    print(f"  Anti-Motion  |  device={device}")
+    print(f"  chronolock  |  device={device}")
     print("  Method: two-stage PGD for MotionDirector Temporal LoRA")
     print(f"{'='*60}")
 
